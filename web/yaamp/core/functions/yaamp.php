@@ -4,6 +4,7 @@ function yaamp_get_algos()
 {
 	/* Toggle Site Algos Here */
 	return array(
+		'equihash',
 		'sha256',
 		'sha256t',
 		'sha256q',
@@ -110,6 +111,7 @@ function yaamp_get_algo_norm($algo)
 		return (float) $configAlgoNormCoef[$algo];
 
 	$a = array(
+		'equihash'	=> 1.0,
 		'sha256'	=> 1.0,
 		'scrypt'	=> 1.0,
 		'scryptn'	=> 1.0,
@@ -145,6 +147,7 @@ function yaamp_get_algo_norm($algo)
 function getAlgoColors($algo)
 {
 	$a = array(
+		'equihash'	=> '#006994',
 		'sha256'	=> '#d0d0a0',
 		'sha256t'	=> '#d0d0f0',
 		'sha256q'	=> '#9696dd',
@@ -229,6 +232,7 @@ function getAlgoColors($algo)
 function getAlgoPort($algo)
 {
 	$a = array(
+		'sha256'	=> 7766,
 		'sha256'	=> 3333,
 		'sha256t'	=> 3339,
 		'sha256q'	=> 3337,
